@@ -1,0 +1,15 @@
+# 生データ・加工データディレクトリの中身は除外
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# MySQLのデータ永続化ディレクトリは除外
+mysql/data/
+
+# Python関連
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
