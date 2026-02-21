@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>競馬予想AIアシスタント (Phase A)</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Header Area -->
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-emoji">🐴</span>
+                    <h1>競馬予想AI</h1>
+                </div>
+                <div class="phase-badge">Phase A (Analysis)</div>
+            </div>
+            
+            <div class="quick-actions">
+                <p>今週の重賞レース</p>
+                <div class="action-buttons">
+                    <button class="primary-btn" id="btn-analyze-febS" data-race-id="202505010811" data-race-date="2025-02-23">
+                        G1 フェブラリーS を分析
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Welcome Message -->
+                <div class="message system-message">
+                    <div class="message-bubble system-bubble">
+                        こんにちは！競馬予想AIアシスタントです。<br>
+                        左上のボタンから気になるレースを選択するか、質問を入力してください。<br>
+                        （現在は「フェブラリーS」の過去10年データ分析に特化しています）
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <form id="chat-form" class="input-form">
+                    <input type="text" id="chat-textarea" placeholder="AIに質問する... (例: 人気薄を重視するとどうなる？)" autocomplete="off">
+                    <button type="submit" id="btn-send" class="send-btn" disabled>
+                        <i class="send-icon">➤</i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

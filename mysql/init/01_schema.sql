@@ -74,7 +74,7 @@ CREATE TABLE race_event (
 CREATE TABLE race_result (
     race_event_id VARCHAR(50) NOT NULL,
     horse_id VARCHAR(50) NOT NULL,
-    rank INT,
+    `rank` INT,
     frame INT,
     odds DECIMAL(5,2),
     popularity INT,
